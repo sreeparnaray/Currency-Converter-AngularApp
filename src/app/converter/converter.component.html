@@ -1,0 +1,47 @@
+<div class="search">
+    <h2>Currency Converter</h2>
+</div>
+<div class="container">
+
+    <div class="upper-data">
+        <img src="../../assets/back.jpg" alt="">
+    </div>
+
+    <div class="lower-data">
+        <div class="more-info-label">
+            
+            <label for="fromCurrency">Source CCY:</label>
+            <select id="fromCurrency" [(ngModel)]="fromCurrency">
+                <option value="USD">USD</option>
+                <option value="GBP">GBP</option>
+                <option value="INR">INR</option>
+            </select>
+            <label for="toCurrency">Target CCY:</label>
+            <select id="toCurrency" [(ngModel)]="toCurrency">
+                <option value="USD">USD</option>
+                <option value="GBP">GBP</option>
+                <option value="INR">INR</option>
+            </select>
+        </div>
+        <div class="more-info-label">
+            <label for="amount">Amount (Rs):</label>
+            <input type="number" id="amount" [(ngModel)]="amount">
+        </div>
+
+        <div class="more-info-label">
+            <!-- <button (click)="convert()">Convert</button> -->
+            <button (click)="convertCurrency()" type="button" class="btn btn-outline-info">Convert</button>
+        </div>
+
+        <div class="more-info-label">
+            <div id="resValue" *ngIf="convertedValue">
+                Result: {{ convertedValue }}
+              </div>
+        </div>
+
+
+    </div>
+    
+        
+  
+  
